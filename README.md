@@ -34,7 +34,7 @@ Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing 
 
 5) 2 more columns are calculated across the whole dataframe using vectorized operations: (1) Total of all bank balances - Total of all credit card statement balances, and (2) Total of all bank balances - Total of all credit card total (i.e., not just statement) balances.
 
-### Output: Future Cash Flow Projection
+### Output: Cash Flow Projection Across Future Months (Default = 3)
 <img src="assets/img/cash-flow-projection1.png"><br>
 <img src="assets/img/cash-flow-projection2.png"><br>
 <img src="assets/img/cash-flow-projection3.png"><br>
