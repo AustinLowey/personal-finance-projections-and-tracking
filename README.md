@@ -37,3 +37,4 @@ Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing 
 ### Output: Future Cash Flow Projection
 <img src="assets/img/cash-flow-projection1.png"><br>
 <img src="assets/img/cash-flow-projection2.png"><br>
+<img src="assets/img/cash-flow-projection3.png"><br>
