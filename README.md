@@ -16,6 +16,7 @@ Set up a ~/.finances folder (I'll probably add something to automatically set th
    Examples: Flight purchase, tax return, vacation
    
 Note #1: current_balances is planned to be populated automatically by connecting to financial institution accounts using an API like Teller.io
+
 Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing upcoming supplemental transactions is the one aspect of this project that can never truly be completely automated (for obvious reasons).
 
 ### Input #1 - Recurring Transactions (Periodically Updated):
