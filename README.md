@@ -18,10 +18,10 @@ Set up a ~/.finances folder (I'll probably add something to automatically set th
 Note #1: current_balances is planned to be populated automatically by connecting to financial institution accounts using an API like Teller.io
 Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing upcoming supplemental transactions is the one aspect of this project that can never truly be completely automated (for obvious reasons).
 
-### Input #1: Recurring Transactions:
+### Input #1 - Recurring Transactions (Periodically Updated):
 <img src="assets/img/recurring-transactions.png"><br>
 
-### Input #2: Current Balances:
+### Input #2 - Current Balances (Will be Automatically Updated):
 <img src="assets/img/current-balances.png" width="600"><br>
 
 ### Data Processing Steps:
@@ -34,7 +34,7 @@ Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing 
 
 5) 2 more columns are calculated across the whole dataframe using vectorized operations: (1) Total of all bank balances - Total of all credit card statement balances, and (2) Total of all bank balances - Total of all credit card total (i.e., not just statement) balances.
 
-### Output: Future Cash Flow Projection Across Next 3 Months
+### Output - Future Cash Flow Projection Across Next 3 Months:
 <img src="assets/img/cash-flow-projection1.png"><br>
 <img src="assets/img/cash-flow-projection2.png"><br>
 <img src="assets/img/cash-flow-projection3.png"><br>
