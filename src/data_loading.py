@@ -26,14 +26,19 @@ def load_latest_csv(folder_name: str) -> Optional[pd.DataFrame]:
     
 
 def convert_currency_cols_to_int(df: pd.DataFrame, column_names: List[str]) -> pd.DataFrame:
-    """Cleans and converts specified columns from accounting/currency strings to numeric."""
+    """
+    Cleans and converts specified columns from accounting/currency strings to numeric.
+    Useful for handling csv data that contains Google Sheets/Excel's accounting data type.
+    """
     
     for col in column_names:
         if col in df.columns:
 
             # Remove $, spaces and commas and convert to numeric
             try:
-                df[col] = df[col].replace(r'[()\$, ]', '', regex=True)
+                df[col] = df[col].replace(r'[\,\$ ]', '', regex=True)
+                df[col] = df[col].replace("-", "0") # This step needed before replacing parentheses
+                df[col] = df[col].replace(r'\((.*)\)', r'-\1', regex=True)  # Replace () with -
                 df[col] = pd.to_numeric(df[col], errors="coerce")
             except Exception as e:
                 print(f"Error converting column '{col}': {e}")

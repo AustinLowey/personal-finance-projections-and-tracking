@@ -1,4 +1,3 @@
-from datetime import datetime
 import pandas as pd
 
 # Remove data_loading import if/when changing project_supplenental_transactions()
@@ -13,6 +12,7 @@ def project_supplemental_transactions() -> pd.DataFrame:
         supp_trans_projection,
         ["transaction_amount"]
     )
+    supp_trans_projection["date"] = pd.to_datetime(supp_trans_projection["date"])
 
     return supp_trans_projection
 
@@ -23,7 +23,10 @@ def combine_rec_and_supp(
 ) -> pd.DataFrame:
     """Combines and sorts recurring and supplemental transaction projections."""
 
-    combined_trans_projection = pd.concat([rec_trans_projection, supp_trans_projection])
+    combined_trans_projection = pd.concat(
+        [rec_trans_projection, supp_trans_projection]
+    )
+    combined_trans_projection["date"] = pd.to_datetime(combined_trans_projection["date"])
     combined_trans_projection = combined_trans_projection.sort_values(
         by=["date", "transaction_amount"],
         ascending=[True, False],

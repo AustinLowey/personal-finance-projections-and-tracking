@@ -38,8 +38,15 @@ def project_recurring_transactions(
             continue
 
         # Reset these for each for loop iteration
-        current_date = datetime.strptime(row["on_date"], "%Y-%m-%d").date()
         prorate_statement_closing = True
+        current_date = datetime.strptime(row["on_date"], "%Y-%m-%d").date()
+
+        if current_date == projection_start_date and row["precise_on_date"] == True:
+            print(
+                f"Warning: Transaction '{row['transaction']}' for amount '{row['amount']}' "
+                "is scheduled for today. Ensure transaction is not yet reflected in current "
+                "balances and if it is, modify final cash flow accordingly."
+            )
 
         while current_date <= projection_end_date:
             next_date = (current_date + frequency_map[row["frequency"]]).date()
