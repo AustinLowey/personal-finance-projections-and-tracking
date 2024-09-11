@@ -15,8 +15,7 @@ Set up a ~/.finances folder (I'll probably add something to automatically set th
 5) supplemental_transactions - Upcoming, non-recurring, larger expenses that need to be manually input
    Examples: Flight purchase, tax return, vacation
    
-Note #1: current_balances is planned to be populated automatically by connecting to financial institution accounts using an API like Teller.io
-
+Note #1: current_balances is planned to be populated automatically by connecting to financial institution accounts using an API like Teller.io<br>
 Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing upcoming supplemental transactions is the one aspect of this project that can never truly be completely automated (for obvious reasons).
 
 ### Input #1 - Recurring Transactions (Periodically Updated):
@@ -36,6 +35,12 @@ Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing 
 5) 2 more columns are calculated across the whole dataframe using vectorized operations: (1) Total of all bank balances - Total of all credit card statement balances, and (2) Total of all bank balances - Total of all credit card total (i.e., not just statement) balances.
 
 ### Output - Future Cash Flow Projection Across Next 3 Months:
+bank_bal = Sum of all bank balances<br>
+ccstmt_bal = Sum of all credit card statement balances<br>
+cctotal_bal = Sum of all credit card total account balances<br>
+net_bank_ccstmt = bank_bal - ccstmt_bal<br>
+net_bank_cctotal = bank_bal - cctotal_bal
+
 <img src="assets/img/cash-flow-projection1.png"><br>
 <img src="assets/img/cash-flow-projection2.png"><br>
 <img src="assets/img/cash-flow-projection3.png"><br>
