@@ -29,7 +29,7 @@ Note #2: supplemental_transactions is planned to be replaced by a GUI. Managing 
 1) All instances of each recurring transaction are extrapolated across an adjustable time period (3 months into the future by default). The algorithm I developed is in src/rec_trans_projection.py and includes lots of error handling, warnings for things like if a transaction is past its end date (ex: a car loan paid off), etc.
 2) Supplemental transactions, along with a row aggregating current bank and cc balances, are then "inserted" (i.e., pandas concat + sorting) into the projection dataframe.
 3) Rows are added on the 11th and 13th of each future month in the projection (AFTER all other transactions on those dates - see Future Cash Flow Projection screenshots for clarity) to account for all of my cc acounts' statement due dates and close dates, respectively; these dates are easily adjustable in main.py.
-4) Bank, cc statement, and cc total balances are calculated, row-by-row, based on the following logic, which is why the previous step adding "statement_due" and "statement_close" rows was necessary:
+4) Bank, cc statement, and cc total balances are calculated (row-by-row since each row is dependent on the previous) based on the following logic, which is why the previous step adding "statement_due" and "statement_close" rows was necessary:
 
 <img src="assets/img/cash-flow-calculations-logic.png" width="500"><br>
 
