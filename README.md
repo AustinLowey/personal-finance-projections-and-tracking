@@ -4,13 +4,14 @@
 Completely automating my personal finances, cash flow planning, and analytics.
 
 ### Usage:
-Set up a ~/.finances folder (I'll probably add something to automatically set this up in the future with dumby/template numbers to be filled out, as several people have already utilized at least some aspects of this project), then simply run main.py.
+Set up a ~/.finances folder, then simply run main.py. (Note: Will probably add something to automatically set this folder up in the future with a template to be filled out, as several people have already utilized at least some aspects of this project.)
 
 <img src="assets/img/finances-folder.png" width="500"><br>
 ~/.finances folder containing subfolders for:
-1) current_balances - Current balances for all bank, credit card (statement and total), and investment accounts. This
-2) projected_cash_flow - Output folder where future cash flow projection .csv files are saved
-3) recurring_transactions - All recurring expenses, payments, and income and their amounts, frequencies, exact pay dates, etc.
+1) current_balances - Current balances for all bank, credit card (statement and total), and investment accounts.
+2) historical_transactions - Historical credit card and bank transaction data (not shown in screenshot).
+3) projected_cash_flow - Output folder where future cash flow projection .csv files are saved
+4) recurring_transactions - All recurring expenses, payments, and income and their amounts, frequencies, exact pay dates, etc.
    Examples: Rent, car payment, paychecks, food (amortized), annual subscriptions
 5) supplemental_transactions - Upcoming, non-recurring, larger expenses that need to be manually input
    Examples: Flight purchase, tax return, vacation
