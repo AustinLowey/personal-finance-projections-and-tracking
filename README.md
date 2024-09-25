@@ -1,8 +1,9 @@
 # personal-finance-tracker
 
 ## Overview:
-Completely automating my personal finances, cash flow planning, and analytics.
-<a href="https://austinlowey.github.io" target="_blank"><img src="assets/gif/sankeys.gif" width="800px">
+Completely automating my personal finances, cash flow planning, and analytics.<br>
+
+<a href="https://austinlowey.github.io" target="_blank"><img src="assets/img/sankeys.gif">
 
 ### Usage:
 Set up a ~/.finances folder, then simply run main.py. (Note: Will probably add something to automatically set this folder up in the future with a template to be filled out, as several people have already utilized at least some aspects of this project.)
