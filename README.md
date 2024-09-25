@@ -5,7 +5,7 @@
 <br><br>
 
 Example Sankey Diagram automatically created using Python + Plotly (numbers hidden for privacy):
-<a href="https://austinlowey.github.io" target="_blank"><img src="assets/img/sankeys.gif">
+<a href="https://github.com/AustinLowey/personal-finance-projections-and-tracking/blob/main/assets/img/sankeys.gif" target="_blank"><img src="assets/img/sankeys.gif">
 
 ### Cash Flow Projection Usage (Most Useful Feature in Repo - Typically Executed Monthly):
 Set up a ~/.finances folder, then simply run main.py. (Note: Will probably add something to automatically set this folder up in the future with a template to be filled out, as several people have already utilized at least some aspects of this project.)
