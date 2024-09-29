@@ -140,6 +140,7 @@ def prorate_monthly(
         next_prorate_day = (
             (start_date + pd.DateOffset(days=(32 - start_date.day)))
             .replace(day=prorate_day)
+            .date()
         )
 
     days_until_next_prorate_day = (next_prorate_day - start_date).days + 1  # Inclusive
