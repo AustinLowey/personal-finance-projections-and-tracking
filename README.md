@@ -50,6 +50,11 @@ net_bank_cctotal = bank_bal - cctotal_bal
 <img src="assets/img/cash-flow-projection2.png"><br>
 <img src="assets/img/cash-flow-projection3.png"><br>
 
+### Needs/Wants/Savings Post-Tax Budget Breakdown:
+
+<img src="assets/img/nsw-concise.png" width="600">
+
+<img src="assets/img/nsw-full.png" width="600">
 
 ### To Do:
 1) Automatically extract bank/investment/cc balances from linked accounts. Several APIs available, each with their own limitations. Top 2 are **Chase** (already linked accounts, but API may be significantly limited for individual developers) or **Teller.io** once they release their upcoming Python SDK.
