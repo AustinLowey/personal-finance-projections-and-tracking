@@ -32,5 +32,6 @@ def combine_rec_and_supp(
         ascending=[True, False],
         ignore_index=True
     )
+    print("Merged future projected supplemental and recurring transactions.")
 
     return combined_trans_projection
