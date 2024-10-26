@@ -161,7 +161,7 @@ def plot_save_time_series_cash_flow_balances(cash_flow: pd.DataFrame, file_save_
     }
     fig = px.line(
         melted_cash_flow, x='date', y='balance', color='balance_type',
-        title='Projected Time Series of Projected Bank and Credit Card Balances',
+        title='Projected Time Series of Future Bank and Credit Card Balances',
         hover_data={'transaction': True, 'transaction_amount': True, 'charge_to': True},
         color_discrete_map=color_map
     )
