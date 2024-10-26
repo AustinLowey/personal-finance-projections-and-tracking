@@ -1,5 +1,7 @@
 from datetime import datetime
+import matplotlib as plt
 import pandas as pd
+import plotly.express as px
 import warnings
 
 
@@ -128,4 +130,56 @@ def calculate_future_balances(cash_flow: pd.DataFrame) -> pd.DataFrame:
         cash_flow.net_bank_ccstmt = cash_flow.bank_bal - cash_flow.ccstmt_bal
         cash_flow.net_bank_cctotal = cash_flow.bank_bal - cash_flow.cctotal_bal
 
+    print("Completed future cash flow projection.")
+
     return cash_flow
+
+
+def plot_save_time_series_cash_flow_balances(cash_flow: pd.DataFrame, file_save_path: str) -> None:
+    """
+    Plots and saves an interactive time series plot of projected/future bank and credit card balances.
+
+    x-axis: 'date'
+    y-axis series: 'bank_bal', 'ccstmt_bal', 'cctotal_bal', 'net_bank_ccstmt'
+    """
+
+    # Melt the DataFrame for easier compatibility with Plotly
+    melted_cash_flow = cash_flow.melt(
+        id_vars=['date', 'transaction', 'transaction_amount', 'charge_to'],
+        value_vars=['bank_bal', 'ccstmt_bal', 'cctotal_bal', 'net_bank_ccstmt'],
+        var_name='balance_type',
+        value_name='balance'
+    )
+
+    # Create and format interactive line plot
+    color_map = {
+        'bank_bal': 'green',
+        'ccstmt_bal': 'red',
+        'cctotal_bal': 'lightcoral',
+        'net_bank_ccstmt': 'blue',
+        # 'net_bank_cctotal': 'deepskyblue' # Removed this series/trace
+    }
+    fig = px.line(
+        melted_cash_flow, x='date', y='balance', color='balance_type',
+        title='Projected Time Series of Projected Bank and Credit Card Balances',
+        hover_data={'transaction': True, 'transaction_amount': True, 'charge_to': True},
+        color_discrete_map=color_map
+    )
+    fig.update_layout(
+        xaxis_title='Date',
+        yaxis_title='Balances ($)',
+        legend_title='Balance Type (Click trace to add/remove)',
+        plot_bgcolor='lightgrey',
+        paper_bgcolor='beige',
+        title_x=0.4,
+        title_font=dict(size=20),
+        margin=dict(l=40, r=40, t=50, b=40), 
+    )
+    fig.update_traces(line=dict(width=2))
+    fig.update_xaxes(tickformat='%b %d, %Y')
+
+    # Save and show the plot
+    fig.write_html(file_save_path)
+    fig.show()
+
+    print(f"Saved future cash flow projection plot to: {file_save_path}")

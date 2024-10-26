@@ -16,6 +16,7 @@ def load_latest_csv(folder_name: str) -> Optional[pd.DataFrame]:
         latest_file = files[-1]
         try:
             df = pd.read_csv(latest_file)
+            print(f"Loaded latest {folder_name} file: {latest_file}")
             return df
         except Exception as e:
             print(f"Error loading file {latest_file}: {e}")
