@@ -7,7 +7,14 @@
 Example Sankey Diagram automatically created using Python + Plotly (numbers hidden for privacy):
 <a href="https://github.com/AustinLowey/personal-finance-projections-and-tracking/blob/main/assets/img/sankeys.gif" target="_blank"><img src="assets/img/sankeys.gif">
 
-### Cash Flow Projection Usage (Most Useful Feature in Repo - Typically Executed Monthly):
+## Cash Flow Projection (Most useful feature in repo, which I typically execute monthly):
+
+### Example Output (Actual numbers hidden):
+
+<img src="assets/img/timeseries-projection-plot.png" width="800">
+
+### Usage:
+
 Set up a ~/.finances folder, then simply run main.py. (Note: Will probably add something to automatically set this folder up in the future with a template to be filled out, as several people have already utilized at least some aspects of this project.)
 
 <img src="assets/img/finances-folder.png" width="500"><br>
@@ -50,16 +57,15 @@ net_bank_cctotal = bank_bal - cctotal_bal
 <img src="assets/img/cash-flow-projection2.png"><br>
 <img src="assets/img/cash-flow-projection3.png"><br>
 
-### Needs/Wants/Savings Post-Tax Budget Breakdown:
+## Needs/Wants/Savings Post-Tax Budget Breakdown:
 
 <img src="assets/img/nsw-concise.png" width="600">
 
 <img src="assets/img/nsw-full.png" width="600">
 
-### To Do:
+## To Do:
 1) Automatically extract bank/investment/cc balances from linked accounts. Several APIs available, each with their own limitations. Top 2 are **Chase** (already linked accounts, but API may be significantly limited for individual developers) or **Teller.io** once they release their upcoming Python SDK.
 2) Add a cc reward categories tracker that highlights the best cc to use each quarter by category. Add something to keep track of total rewards (and their value in dollars) earned from each card over a year or month.
-3) Automatically generate pie charts that are similar to the sankey diagram, but also add needs/wants/savings breakdown.
-4) Break up all retirement savings data into pre vs post tax AND stocks vs international stocks vs bonds. For traditional accounts, add an equivalent value for after getting taxed.
-5) (Maybe) Add other metrics like investment/net worth time series charts, though this feature is already available from a number of institutions.
-6) Add a script to automatically set up a ~/.finances folder with subfolders and templates.
+3) Break up all retirement savings data into pre vs post tax AND stocks vs international stocks vs bonds. For traditional accounts, add an equivalent value for after getting taxed.
+4) (Maybe) Add other metrics like investment/net worth time series charts, though this feature is already available from a number of financial institutions.
+5) Add a script to automatically set up a ~/.finances folder with subfolders and templates.
