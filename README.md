@@ -7,11 +7,11 @@
 Example Sankey Diagram automatically created using Python + Plotly (numbers hidden for privacy):
 <a href="https://github.com/AustinLowey/personal-finance-projections-and-tracking/blob/main/assets/img/sankeys.gif" target="_blank"><img src="assets/img/sankeys.gif">
 
-## Cash Flow Projection (Most useful feature in repo, which I typically execute monthly):
+## Cash Flow Projection (Most useful feature in repo, which I execute monthly):
 
 ### Example Output (Actual numbers hidden):
 
-<img src="assets/img/timeseries-projection-plot.png" width="800">
+<img src="assets/img/timeseries-projection-plot2.png" width="800">
 
 ### Usage:
 
