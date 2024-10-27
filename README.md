@@ -9,7 +9,7 @@ Example Sankey Diagram automatically created using Python + Plotly (numbers hidd
 
 ## Cash Flow Projection (Most useful feature in repo, which I execute monthly):
 
-### Example Output (Actual numbers hidden):
+### Example Output (Interactivity disabled and actual numbers hidden):
 
 <img src="assets/img/timeseries-projection-plot2.png" width="800">
 
