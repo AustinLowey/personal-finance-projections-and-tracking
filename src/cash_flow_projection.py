@@ -170,7 +170,6 @@ def plot_save_time_series_cash_flow_balances(cash_flow: pd.DataFrame, file_save_
         yaxis_title='Balances ($)',
         legend_title='Balance Type (Click trace to add/remove)',
         plot_bgcolor='lightgrey',
-        paper_bgcolor='beige',
         title_x=0.4,
         title_font=dict(size=20),
         margin=dict(l=40, r=40, t=50, b=40), 
